@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== PAGE ===== */
+body {
+  background:
+    radial-gradient(circle at top right, rgba(139,92,246,0.25), transparent 45%),
+    radial-gradient(circle at bottom left, rgba(59,130,246,0.18), transparent 40%),
+    linear-gradient(180deg, #050814, #0b1024);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e5e7eb;
+}
+
+
+/* ===== MAIN CONTAINER ===== */
+
+
+/* ===== TITLE ===== */
+h1 {
+  letter-spacing: 1px;
+  font-size: 28px;
+  opacity: 0.95;
+}
+
+/* ===== CAMERA BOX ===== */
+.camera-box {
+  position: relative;
+  width: 520px;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 0 45px rgba(139,92,246,0.35),
+    inset 0 0 25px rgba(255,255,255,0.05);
+}
+
+/* VIDEO + OVERLAY */
+video,
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== STATUS BADGE ===== */
+.status {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(6px);
+}
+
+.status.known {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  box-shadow: 0 0 18px rgba(139,92,246,0.7);
+}
+
+.status.unknown {
+  background: linear-gradient(135deg, #ef4444, #991b1b);
+  box-shadow: 0 0 15px rgba(239,68,68,0.6);
+}
+
+
+/* ===== CONTROL PANEL ===== */
+.control-panel {
+  width: 520px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+}
+
+.control-panel h2 {
+  margin-bottom: 18px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ===== INPUT FIELDS ===== */
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.85);
+  color: #003333;
+  font-size: 14px;
+}
+
+/* ===== PROGRESS ===== */
+.progress {
+  margin: 18px 0 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+/* ===== BUTTONS ===== */
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  background: rgba(255,255,255,0.2);
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+button:not(:disabled) {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  color: #ffffff;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(139,92,246,0.8);
+}
+
+h1, h2 {
+  background: linear-gradient(135deg, #c084fc, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== PAGE LAYOUT ===== */
+
+.page{
+width:1200px;
+max-width:95%;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:25px;
+}
+
+.header{
+text-align:center;
+}
+
+.header p{
+opacity:0.7;
+font-size:14px;
+margin-top:4px;
+}
+
+.layout{
+display:flex;
+gap:30px;
+align-items:flex-start;
+justify-content:center;
+}
+
+.camera-section{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:15px;
+align-items:center;
+}
+
+.result-box{
+width:100%;
+padding:15px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+text-align:center;
+}
+
+.result-box .label{
+font-size:13px;
+opacity:0.7;
+margin-bottom:4px;
+}
+
+#detectedName{
+font-size:22px;
+font-weight:600;
+color:#8b5cf6;
+}
+
+.control-panel{
+width:360px;
+}
+
+/* ===== NEW LAYOUT ===== */
+
+.page{
+width:1200px;
+max-width:95%;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:30px;
+}
+
+.header{
+text-align:center;
+}
+
+.layout{
+display:flex;
+gap:40px;
+align-items:flex-start;
+justify-content:center;
+}
+
+.camera-section{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:20px;
+align-items:center;
+}
+
+.camera-box{
+width:100%;
+max-width:620px;
+}
+
+.result-box{
+width:100%;
+max-width:620px;
+padding:15px;
+border-radius:14px;
+background:rgba(255,255,255,0.05);
+text-align:center;
+}
+
+.control-panel{
+width:360px;
+}

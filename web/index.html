@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Face Recognition System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="page">
+
+  <div class="header">
+    <h1>Real-Time Face Recognition System</h1>
+    <p>AI Powered Identification</p>
+  </div>
+
+  <div class="layout">
+
+    <!-- LEFT SIDE CAMERA -->
+    <div class="camera-section">
+
+      <div class="camera-box">
+        <video id="video" autoplay muted playsinline></video>
+        <canvas id="overlay"></canvas>
+
+        <div id="status" class="status known">
+          Analyzing...
+        </div>
+      </div>
+
+      <div class="result-box">
+        <div class="label">Detected Person</div>
+        <div id="detectedName">Unknown</div>
+      </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE PANEL -->
+    <div class="control-panel">
+
+      <h2>Add New Person</h2>
+
+      <div class="field">
+        <label>Name</label>
+        <input type="text" id="personName" placeholder="Enter name">
+      </div>
+
+      <div class="field">
+        <label>Images to capture</label>
+        <input type="number" id="imageCount" value="10" min="3" max="30">
+      </div>
+
+      <div class="progress">
+        <span id="progressText">0 / 0</span>
+
+        <div class="progress-bar">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="addBtn" disabled>Add Person</button>
+        <button id="captureBtn" disabled>Capture</button>
+        <button id="trainBtn" disabled>Train Model</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>

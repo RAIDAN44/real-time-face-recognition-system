@@ -1,0 +1,9 @@
+numpy
+opencv-python
+torch
+facenet-pytorch
+scikit-learn
+flask
+flask-cors
+pillow
+matplotlib
