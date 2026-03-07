@@ -24,7 +24,7 @@ This architecture makes the system flexible and allows it to be easily integrate
 
 # System Demo
 
-![System Interface](images/interface.jpg)
+![System Interface](./images/interface.jpg)
 
 The interface displays the live webcam feed, performs real-time face detection, and shows the predicted identity along with bounding boxes around detected faces.
 
