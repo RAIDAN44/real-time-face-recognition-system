@@ -1,10 +1,22 @@
 # Real-Time Face Recognition System
 
+![Python](https://img.shields.io/badge/Python-3.9-blue)
+![Flask](https://img.shields.io/badge/Flask-Web%20API-green)
+![Computer Vision](https://img.shields.io/badge/Computer%20Vision-Face%20Recognition-orange)
+![Deep Learning](https://img.shields.io/badge/Deep%20Learning-FaceNet-purple)
+![Status](https://img.shields.io/badge/Project-Active-success)
+
 A real-time face recognition system built using **Deep Learning, Computer Vision, and Web Technologies**.
 
 The system captures frames from a webcam, detects faces using **MTCNN**, generates embeddings using **FaceNet**, and identifies individuals by comparing embeddings with stored **centroids using cosine similarity**.
 
 A web interface allows users to recognize faces in real time, add new people dynamically, and train the model directly from the browser.
+
+---
+
+# System Demo
+
+![System Interface](images/interface.jpg)
 
 ---
 
@@ -26,15 +38,17 @@ A web interface allows users to recognize faces in real time, add new people dyn
 
 The recognition pipeline follows the standard deep learning workflow:
 
+```
 Camera Frame
-↓
+      ↓
 Face Detection (MTCNN)
-↓
+      ↓
 Face Embedding (FaceNet)
-↓
+      ↓
 Cosine Similarity Comparison
-↓
+      ↓
 Identity Recognition
+```
 
 ---
 
@@ -80,7 +94,7 @@ Identity Recognition
 # Project Structure
 
 ```
-face-recognition-system
+real-time-face-recognition-system
 
 dataset/                # training images (not included in repository)
 
@@ -104,6 +118,9 @@ web/                    # frontend interface
    css/
    js/
 
+images/
+   interface.jpg        # UI preview image
+
 run.py                  # start the full system
 requirements.txt
 README.md
@@ -116,8 +133,8 @@ README.md
 Clone the repository:
 
 ```
-git clone https://github.com/YOUR_USERNAME/face-recognition-system.git
-cd face-recognition-system
+git clone https://github.com/RAIDAN44/real-time-face-recognition-system.git
+cd real-time-face-recognition-system
 ```
 
 Install dependencies:
@@ -208,6 +225,14 @@ Updates:
 
 ---
 
+# Dataset and Models
+
+The dataset and trained models are **not included in this repository**.
+
+Users must collect images and generate the models by running the training pipeline.
+
+---
+
 # Future Improvements
 
 * Multi-face tracking
@@ -220,5 +245,7 @@ Updates:
 
 # Author
 
-AI Student
+**Raidan Al-khateeb**
+
+Artificial Intelligence
 Computer Vision Project
