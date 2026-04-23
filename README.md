@@ -382,6 +382,8 @@ Because the backend is built using **Flask REST APIs**, the system can easily co
 # Author
 
 **Raidan Al-khateeb**
+**Mohammed Al-wosabi**
+
 
 Artificial Intelligence
 Computer Vision Project
